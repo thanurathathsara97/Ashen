@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHEN GAMING HUB | Ultimate Gaming Experience</title>
+
+    <!-- FontAwesome Icons & Gaming Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Electrolize&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BACKGROUND VIDEO FIX (Autoplay, Muted & Playsinline Added) -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <!-- TOUCH / MOUSE FIRE TRAIL CANVAS -->
+    <canvas id="trail-canvas"></canvas>
+
+    <!-- NAVIGATION BAR -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-gamepad"></i> ASHEN GAMING HUB
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-item active" data-page="home">Home</a></li>
+            <li><a href="#" class="nav-item" data-page="games">Games</a></li>
+            <li><a href="#" class="nav-item" data-page="tournaments">Tournaments</a></li>
+            <li><a href="#" class="nav-item" data-page="community">Community</a></li>
+            <li><a href="#" class="nav-item" data-page="store">Store</a></li>
+        </ul>
+        <button class="login-btn" id="openLoginBtn"><i class="fa-solid fa-lock"></i> LOGIN</button>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+
+        <!-- 1. HOME PAGE -->
+        <section class="page-section active" id="page-home">
+            
+            <div class="hero">
+                <h1 class="hero-title">ASHEN GAMING HUB</h1>
+                <p class="hero-subtitle">Enter The Next Generation Of Gaming</p>
+                <button class="cta-btn" id="ctaBtn">JOIN THE HUB</button>
+            </div>
+
+            <!-- SECTION 1: HIGHLIGHTS -->
+            <div class="section-title">
+                <h2>FEATURED HIGHLIGHTS</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="features-grid">
+                <div class="card">
+                    <i class="fa-solid fa-trophy"></i>
+                    <h3>Esports Arena</h3>
+                    <p>Compete in daily tournaments and win amazing custom prizes with global rankings.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Ultra High FPS</h3>
+                    <p>Optimized cloud gaming infrastructure to give you zero lag performance.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Pro Community</h3>
+                    <p>Connect, team up, and stream with thousands of verified gamers worldwide.</p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: TRENDING GAMES -->
+            <div class="section-title section-spacing">
+                <h2>TRENDING GAMES</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="image-grid">
+                <div class="photo-card">
+                    <img src="game1.jpg" alt="Game 1" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <h3>CYBER ACTION 2077</h3>
+                        <p>Action / Sci-Fi Open World</p>
+                        <button class="play-btn"><i class="fa-solid fa-play"></i> PLAY NOW</button>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="game2.jpg" alt="Game 2" onerror="this.src='https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <h3>NEED FOR SPEED CARBON</h3>
+                        <p>High Speed Racing & Customization</p>
+                        <button class="play-btn"><i class="fa-solid fa-play"></i> PLAY NOW</button>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="game3.jpg" alt="Game 3" onerror="this.src='https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <h3>SHADOW WARRIOR</h3>
+                        <p>Action & Adventure RPG</p>
+                        <button class="play-btn"><i class="fa-solid fa-play"></i> PLAY NOW</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: LATEST NEWS -->
+            <div class="section-title section-spacing">
+                <h2>LATEST GAMING NEWS</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="image-grid">
+                <div class="photo-card">
+                    <img src="news1.jpg" alt="News 1" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <h3>NEW ENGINE TECH</h3>
+                        <p>Unreal Engine 5.4 graphics update for mobile & PC.</p>
+                        <button class="play-btn">READ ARTICLE</button>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="news2.jpg" alt="News 2" onerror="this.src='https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <h3>WORLD CHAMPIONSHIP</h3>
+                        <p>Global Esports Tournament finals announced!</p>
+                        <button class="play-btn">READ ARTICLE</button>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="news3.jpg" alt="News 3" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <h3>GPU BENCHMARKS</h3>
+                        <p>Top RTX & High-End GPUs performance breakdown.</p>
+                        <button class="play-btn">READ ARTICLE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: STREAMERS -->
+            <div class="section-title section-spacing">
+                <h2>TOP HUB STREAMERS</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="image-grid">
+                <div class="photo-card">
+                    <img src="streamer1.jpg" alt="Streamer 1" onerror="this.src='https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <span class="live-badge">LIVE NOW</span>
+                        <h3>ASHEN_VIPER</h3>
+                        <p>Streaming Cyberpunk 2077</p>
+                        <button class="play-btn"><i class="fa-solid fa-play"></i> WATCH</button>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="streamer2.jpg" alt="Streamer 2" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <span class="live-badge">LIVE NOW</span>
+                        <h3>CYBER_QUEEN</h3>
+                        <p>Streaming Valorant Ranked</p>
+                        <button class="play-btn"><i class="fa-solid fa-play"></i> WATCH</button>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="streamer3.jpg" alt="Streamer 3" onerror="this.src='https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <span class="upcoming-badge">OFFLINE</span>
+                        <h3>GHOST_RIDER</h3>
+                        <p>Streaming NFS Racing</p>
+                        <button class="play-btn"><i class="fa-solid fa-user-plus"></i> FOLLOW</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 5: FAQ -->
+            <div class="section-title section-spacing">
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-box">
+                    <h3><i class="fa-solid fa-circle-question"></i> How do I log into Ashen Gaming Hub?</h3>
+                    <p>Click on the LOGIN button at the top right header, enter password <strong>12345678</strong>, and unlock full access!</p>
+                </div>
+                <div class="faq-box">
+                    <h3><i class="fa-solid fa-circle-question"></i> How to add custom photos and videos?</h3>
+                    <p>Put your <code>bg-video.mp4</code> and photos into your VS Code folder and ensure the file names match the <code>src="..."</code> tags.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 2. GAMES PAGE -->
+        <section class="page-section" id="page-games">
+            <div class="section-title margin-top-page">
+                <h2>FEATURED GAMES ARENA</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="image-grid">
+                <div class="photo-card">
+                    <img src="game1.jpg" alt="Games Photo 1" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <h3>ACTION ARENA</h3>
+                        <p>Sci-Fi combat experience</p>
+                        <button class="play-btn"><i class="fa-solid fa-play"></i> LAUNCH</button>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="game2.jpg" alt="Games Photo 2" onerror="this.src='https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <h3>NEED FOR SPEED / RACING</h3>
+                        <p>High speed racing collection</p>
+                        <button class="play-btn"><i class="fa-solid fa-play"></i> LAUNCH</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TOURNAMENTS PAGE -->
+        <section class="page-section" id="page-tournaments">
+            <div class="section-title margin-top-page">
+                <h2>TOURNAMENTS ARENA</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="image-grid">
+                <div class="photo-card">
+                    <img src="tournament1.jpg" alt="Tournament Photo 1" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <span class="live-badge">LIVE SQUAD</span>
+                        <h3>ASHEN CHAMPIONSHIP</h3>
+                        <button class="join-tn-btn">REGISTER SLOT</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. COMMUNITY PAGE -->
+        <section class="page-section" id="page-community">
+            <div class="section-title margin-top-page">
+                <h2>COMMUNITY GALLERY</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="image-grid">
+                <div class="photo-card">
+                    <img src="community1.jpg" alt="Community Photo 1" onerror="this.src='https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <h3>SETUP SHOWCASE</h3>
+                        <p>Uploaded by Ashen</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. STORE PAGE -->
+        <section class="page-section" id="page-store">
+            <div class="section-title margin-top-page">
+                <h2>GAMING STORE GEAR</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="image-grid">
+                <div class="photo-card">
+                    <img src="gear1.jpg" alt="Store Photo 1" onerror="this.src='https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=600&q=80'">
+                    <div class="photo-overlay">
+                        <h3>RGB GAMING HEADSET</h3>
+                        <button class="play-btn"><i class="fa-solid fa-cart-shopping"></i> BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <i class="fa-solid fa-gamepad"></i> ASHEN GAMING HUB
+            </div>
+            <p>© 2026 ASHEN GAMING HUB. ALL RIGHTS RESERVED.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="login-box">
+            <span class="close-btn" id="closeLoginBtn">&times;</span>
+            <h2>ACCESS HUB</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="password" id="passInput" placeholder="ENTER PASSWORD" required>
+                </div>
+                <button type="submit" class="submit-btn">UNLOCK ACCESS</button>
+                <p class="error-msg" id="errorMsg">INVALID PASSWORD! TRY AGAIN.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link JS File -->
+    <script src="script.js"></script>
+</body>
+</html>
